@@ -1,8 +1,7 @@
 public class CreditPaymentService {
     public double calculate(int creditSum, double rate, int years) {
         int month = years * 12;
-        double x = 100 * rate;
-        double ratePerMonth = rate / x;
+        double ratePerMonth = rate / 100 / 12;
         int x5 = -month;
         double x4 = 1 + ratePerMonth;
         double x3 = Math.pow(x4, x5);
